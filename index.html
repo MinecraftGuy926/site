@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Dream Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <style>
+        #header {
+            text-align: center;
+            color: #1a9626;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-block: outset;
+            border-block-color: red;
+            text-shadow: 2px 2px 3px wheat;
+        }
+
+        /* unvisited link */
+        a:link {
+            color: rgb(240, 252, 240);
+        }
+
+        /* visited link */
+        a:visited {
+            color: rgb(240, 252, 240);
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: rgb(0, 255, 26);
+        }
+
+        /* selected link */
+        a:active {
+            color: yellow;
+        }
+    </style>
+    <br>
+    <div id="header">
+        <br>
+        <h1>Minecraft Dream Wiki</h1>
+        <br>
+    </div>
+    <br>
+</head>
+
+<body>
+
+    <!--<nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="modpack.html">Modpack</a></li>
+            <li><a href="server.html">Server</a></li>
+        </ul>
+    </nav>-->
+    <nav class="navbar">
+        <ul id="nav-two" class="nav">
+            <li>
+                <a href="index.html">Home</a>
+                <audio id="beep-two" preload="auto">
+                    <source src="audio/beep.mp3">
+                    </source>
+                    <source src="audio/beep.ogg">
+                    </source>
+                    Your browser isn't invited for super fun time.
+                </audio>
+            </li>
+            <li><a href="modpack.html">Modpack</a></li>
+            <li><a href="server.html">Server</a></li>
+        </ul>
+    </nav>
+    <br>
+    <main>
+
+        <p>
+        <h3>Hello there!</h3>
+        </p>
+
+        <br>
+
+        <audio src="music/C418 - Minecraft - Volume Alpha - 13 Wet Hands.mp3" controls></audio>
+
+        <script>$("#nav-two a")
+                .each(function (i) {
+                    if (i != 0) {
+                        $("#beep-two")
+                            .clone()
+                            .attr("id", "beep-two" + i)
+                            .appendTo($(this).parent());
+                    }
+                    $(this).data("beeper", i);
+                })
+                .mouseenter(function () {
+                    $("#beep-two" + $(this).data("beeper"))[0].play();
+                });
+            $("#beep-two").attr("id", "beep-two0");</script>
+    </main>
+
+</body>
+
+</html>
