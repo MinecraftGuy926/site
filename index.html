@@ -11,16 +11,16 @@
     <style>
         #header {
             text-align: center;
-            color: #1a9626;
+            color: #eef5e8;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            border-block: outset;
-            border-block-color: red;
-            text-shadow: 2px 2px 3px wheat;
+            border-block: ridge;
+            border-block-color: #42870d;
+            text-shadow: 2px 2px 3px rgb(17, 12, 3);
         }
 
         /* unvisited link */
         a:link {
-            color: rgb(240, 252, 240);
+            color: rgb(24, 231, 24);
         }
 
         /* visited link */
@@ -37,12 +37,21 @@
         a:active {
             color: yellow;
         }
+
+        body {
+            margin: 0px;
+            background-color: rgb(255, 255, 255);
+            background-image: url(images/mclandscape.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
     </style>
     <br>
     <div id="header">
-       
-        <h1>Minecraft Dream Wiki</h1>
-       
+
+        <h1>Welcome</h1>
+
     </div>
     <br>
 </head>
@@ -56,6 +65,23 @@
             <li><a href="server.html">Server</a></li>
         </ul>
     </nav>-->
+    <!--.navbar ul {
+    border-style: double;
+    border-color: rgb(57, 56, 49);
+    list-style-type: none;
+    background-color: rgb(187, 193, 196);
+    padding: 0px;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}-->
     <nav class="navbar">
         <ul id="nav-two" class="nav">
             <li>
@@ -69,7 +95,7 @@
                 </audio>
             </li>
             <li><a href="modpack.html">Modpack</a></li>
-            <li><a href="server.html">Server</a></li>
+            <li><a href="server.html">Wiki</a></li>
         </ul>
     </nav>
     <br>
@@ -81,7 +107,7 @@
 
         <br>
 
-        <audio src="music/C418 - Minecraft - Volume Alpha - 13 Wet Hands.mp3" controls></audio>
+
 
         <script>$("#nav-two a")
                 .each(function (i) {
@@ -98,6 +124,18 @@
                 });
             $("#beep-two").attr("id", "beep-two0");</script>
     </main>
+
+
+
+
+
+    <script>
+        var audio = document.getElementById("startaudio");
+        audio.volume = 0.1;
+    </script>
+
+
+
 
 </body>
 
