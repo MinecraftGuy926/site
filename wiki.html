@@ -5,108 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki</title>
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="wiki.css">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
     <style>
-        #header {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            color: rgb(25, 182, 43);
+        .title {
+            margin-top: 80px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section {
             text-align: center;
-            border-block: ridge;
-            border-block-color: #9ca7b6;
-            text-shadow: 2px 2px 3px rgb(3, 29, 11);
-
+            margin: -50px;
+            width: 50%;
+            height: 100%;
         }
 
-        /* unvisited link */
-        a:link {
-            color: rgb(240, 252, 240);
+        .dust {
+            margin-top: 20px;
+
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* visited link */
-        a:visited {
-            color: rgb(240, 252, 240);
+        .items a {
+            text-decoration: none;
         }
 
-        /* mouse over link */
-        a:hover {
-            color: rgb(0, 255, 26);
+        .items a:hover {
+            color: aqua;
         }
 
-        /* selected link */
-        a:active {
-            color: yellow;
+        .items a:active {
+            color: rgb(212, 0, 255);
         }
 
-        body {
-            margin: 0px;
-            background-color: rgb(82, 115, 135);
-            background-image: url(images/gianttree.png);
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
+
+
+        .items {
+            list-style-type: square;
+            margin-top: 20px;
+            align-items: center;
+            display: inline-block;
+            justify-content: center;
         }
     </style>
-    <br>
-    <div id="header">
-
-        <h1>Wiki</h1>
-
-    </div>
-    <br>
-
 </head>
 
 <body>
-    <!--
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="modpack.html">Modpack</a></li>
-            <li><a href="server.html">Server</a></li>
-        </ul>
-    </nav>
--->
-    <nav class="navbar">
-        <ul id="nav-two" class="nav">
-            <li>
-                <a href="index.html">Home</a>
-                <audio id="beep-two" preload="auto">
-                    <source src="audio/beep.mp3">
-                    </source>
-                    <source src="audio/beep.ogg">
-                    </source>
-                    Your browser isn't invited for super fun time.
-                </audio>
-            </li>
-            <li><a href="modpack.html">Modpack</a></li>
-            <li><a href="wiki.html">Wiki</a></li>
-        </ul>
-    </nav>
-    <br>
-    <main>
-        <h3>Mod changes & additions</h3>
-        <ul>
 
-        </ul>
-    </main>
-    <script>$("#nav-two a")
-            .each(function (i) {
-                if (i != 0) {
-                    $("#beep-two")
-                        .clone()
-                        .attr("id", "beep-two" + i)
-                        .appendTo($(this).parent());
-                }
-                $(this).data("beeper", i);
-            })
-            .mouseenter(function () {
-                $("#beep-two" + $(this).data("beeper"))[0].play();
-            });
-        $("#beep-two").attr("id", "beep-two0");</script>
+    <header class="top-bar">
+        <div class="top-inner">
+            <div class="logo">
+                <a href="wiki.html" class="logo-link">
+                    <img src="assets/images/shadow_wiki_mcd.png">
+                </a>
+                <!--span class="logo-splash">1.8 out now!</span>-->
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="download.html">Download</a>
+                <a href="wiki.html">Wiki</a>
+                <a href="updates.html">Updates</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <h3 class="dust">Pardon our dust! The site is still under construction...</h3>
+
+
+
+    <section class="left section">
+
+
+
+        <h2 class="title">Storage/inventory</h2>
+
+        <div class="link">
+            <ul class="items">
+                <li><a href="backpacks.html">Backpacks</a></li><br>
+                <li><a href="">Bundles</a></li><br>
+                <li><a href="">Chests</a></li><br>
+                <li><a href="">Quivers</a></li>
+            </ul>
+        </div>
+
+
+
+        <h2 class="title">Items</h2>
+
+        <div class="link">
+            <ul class="items">
+                <li><a href="">Muskets</a></li>
+                <br>
+                <li><a href="">N/A</a></li>
+            </ul>
+        </div>
+
+    </section>
 </body>
 
 </html>
-
-

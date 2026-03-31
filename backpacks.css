@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Mojangles";
+    src: url("assets/fonts/mojangles-v2.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #222222;
+    background-image: url(assets/images/stone_background.png);
+    color: #e0d0d0;
+    font-family: sans-serif;
+}
+
+
+a {
+    color: #68a0ff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+#page {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+}
+
+.top-bar {
+    margin-bottom: 0;
+    background: url("assets/images/dirt_background.png") repeat-x;
+}
+
+.top-inner {
+
+    margin: 0 auto;
+    padding: 5px 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    display: block;
+    max-height: 48px;
+    height: 48px
+}
+
+.nav-links {
+    width: 76%;
+    display: flex;
+    gap: 32px;
+    font-size: 24px;
+    font-weight: bold;
+
+    justify-content: center;
+    padding: 0px 0 12px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0d0d0;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #68a0ff;
+}
+
+.mcd-gif {
+    margin-top: 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-intro {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
